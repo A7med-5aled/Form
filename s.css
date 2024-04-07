@@ -1,0 +1,225 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: "Francois One", sans-serif;
+
+}
+
+body{
+    background-image: 
+    linear-gradient(to right , rgb(44, 43, 43) , rgb(17, 7, 7));
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
+    width:900px;
+    height:500px;
+    background-color: white;
+    border-radius: 20px;  
+    overflow: hidden;
+    position:relative;
+    /* padding: 40px 30px; */
+   
+
+}
+.links{
+    margin:20px 0;
+}
+.links a {
+    
+    padding:10px 13px;
+    border: 1px solid black;
+    border-radius: 50%; 
+    font-size: 15px;
+
+}
+.links a:hover{
+    color:red
+}
+.comp{
+    width:90%;
+    position: relative;
+
+}
+ input{
+    width:100%;
+    padding:10px 0 10px 60px;
+    border-color:rgb(206, 19, 106);
+    font-size: 20px;
+    outline: none;
+    margin:15px 0;
+    border-radius:25px;
+    background-color: #e6e1e1;
+    
+
+}
+.comp i{
+    position: absolute;
+    top:40%;
+    left:5%;
+    font-size: 18px;
+    color:rgb(114, 114, 114);
+}
+.form > button ,.toggle button{
+    padding:15px 70px;
+    background-color: rgb(189, 28, 189);
+    border:none;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius:30px;
+    cursor:pointer;
+
+}
+.form > button:hover ,.toggle button:hover{
+    background-color: rgb(219, 41, 101);
+}
+span{
+    font-size: 17px;
+    color: #817e7e;
+    margin:20px 0 0 0;
+}
+h1{
+    color: rgb(189, 28, 189);
+   
+
+}
+.form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+   
+}
+.sign-up{
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate:0 -50%;
+    
+}
+.sign-in{
+    position: absolute;
+    top:40%;
+    left:0;
+    translate:0 -40%;
+    
+}
+.toggle{
+    width: 50%;
+    background-image:linear-gradient(rgb(124, 22, 124),rgb(58, 16, 58));
+    height: 100%;
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+    gap:15px;
+    transition:translate .6s ease-in-out;
+    
+}
+.image{
+    width: 50%; 
+}
+.toggle h2{
+    
+    font-size: 30px;
+}
+img{
+    width: 100%;
+}
+.up{
+    right:0;
+    top:0;
+    z-index: 100;
+}
+.in{
+    right:0;
+    opacity:0;
+}
+
+.up.active{
+    /* left:-50%; */
+    translate: -100% 0 ;
+    opacity:-100;
+   z-index: -1;
+}
+.in.active{
+    /* left:0; */
+    
+    translate: -100% 0;
+    opacity:100%;
+
+
+}
+@media ( max-width:991px){
+    .toggle{
+        display:none;
+    }
+
+    main{
+        width:100%;
+        height:100%;
+    }
+    .form{
+        width:100%;
+        
+        left:0;
+    }
+    .sign-up{
+        display:none; 
+    }
+    p{
+    display:block  !important;
+    margin-top:15px;
+    font-size: 20px;
+    font-weight: normal;
+   }
+   p button{
+    color:rgb(44, 44, 243);
+    border:none;
+    background-color:white;
+    font-size: 20px;
+    cursor: pointer;
+   }
+  .comp i {
+    left:3%;
+  }
+  .sign-in.act{
+    display:none;
+ 
+ }
+ .sign-up.act{
+     display:flex;
+ }
+    
+}
+@media (max-width:768px){
+    .comp i {
+        left:6%;
+    }
+
+    .sign-in.act{
+        display:none;
+     
+     }
+     .sign-up.act{
+         display:flex;
+     }
+        
+  
+}
+
+
